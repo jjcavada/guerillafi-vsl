@@ -14,7 +14,7 @@ This is the whole page: three files and a folder of images. No build step, no fr
 ## How to edit (2 minutes)
 
 1. Open `index.html` on GitHub, click the pencil (Edit), change the words, click **Commit changes**.
-2. Wait about 1 minute. The **Actions** tab shows "Deploy to Netlify" running. When it goes green, refresh the live site.
+2. Wait about 1 minute, then refresh the live site. Netlify watches this repo and publishes every commit to `main` by itself.
 
 That is it. Every commit to `main` deploys by itself.
 
@@ -34,6 +34,6 @@ Prefer an editor? Open this repo in Replit, VS Code or GitHub Codespaces (green 
 
 ## Deploy details
 
-Deploys run from `.github/workflows/deploy.yml` with two repository secrets: `NETLIFY_AUTH_TOKEN` and `NETLIFY_SITE_ID`
-(site `guerillafi-vsl-draft`). Nobody needs a Netlify login to publish. To point the page at a different Netlify site,
-change the `NETLIFY_SITE_ID` secret.
+Netlify (site `guerillafi-vsl-draft`) is linked to this repository through the Netlify GitHub app: every push to `main`
+publishes the folder as is, with no build command. Nobody needs a Netlify login to publish. Deploy history and rollbacks
+live in the Netlify dashboard (Jay's team).
