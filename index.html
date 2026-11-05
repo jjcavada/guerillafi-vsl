@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Booking system for Uni K Wax studios | GuerillaFi</title>
+<meta name="description" content="GuerillaFi switches on ads, a text bot, a phone agent and follow-up for your Uni K Wax studio, tuned to your hours and offer. Watch Daylon’s 90-second video, then book a 15-minute call.">
+<!-- DRAFT: remove the robots line when this goes live on funnel.guerillafi.com -->
+<meta name="robots" content="noindex, nofollow">
+<!-- Canonical placeholder: set to the final WordPress URL -->
+<link rel="canonical" href="https://funnel.guerillafi.com/">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GuerillaFi">
+<meta property="og:title" content="The booking system built to keep every Uni K Wax studio fully booked">
+<meta property="og:description" content="We switch on ads, a text bot, a phone agent and follow-up for your studio, run from one place and tuned to your hours and offer. Watch the 90-second video, then book a call.">
+<meta property="og:url" content="https://funnel.guerillafi.com/">
+<meta property="og:image" content="https://guerillafi-vsl-draft.netlify.app/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Figtree:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Figtree:wght@400;500;600&display=swap">
+<link rel="preload" as="image" href="assets/gfi-logo-480.png">
+<link rel="stylesheet" href="styles.css?v=17">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<!-- Icon set (Lucide style, inline SVG only) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+    <symbol id="i-click" viewBox="0 0 24 24"><path d="M14 4.1 12 6"/><path d="m5.1 8-2.9-.8"/><path d="m6 12-1.9 2"/><path d="M7.2 2.2 8 5.1"/><path d="M9.04 9.69a.5.5 0 0 1 .65-.65l11 4.5a.5.5 0 0 1-.07.95l-4.35 1.04a1 1 0 0 0-.74.74l-1.04 4.35a.5.5 0 0 1-.95.07z"/></symbol>
+    <symbol id="i-cal-check" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="m9 16 2 2 4-4"/></symbol>
+    <symbol id="i-cal-plus" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M12 14v5M9.5 16.5h5"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+    <symbol id="i-repeat" viewBox="0 0 24 24"><path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M18 17V9M13 17V5M8 17v-3"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+    <symbol id="i-megaphone" viewBox="0 0 24 24"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></symbol>
+    <symbol id="i-video" viewBox="0 0 24 24"><path d="m16 13 5.22 3.48a.5.5 0 0 0 .78-.42V7.87a.5.5 0 0 0-.75-.43L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></symbol>
+    <symbol id="i-message" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 5-5.54 10.19-7.4 11.8a1 1 0 0 1-1.2 0C9.54 20.19 4 15 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M11.53 2.3a.53.53 0 0 1 .95 0l2.31 4.68a2.12 2.12 0 0 0 1.6 1.16l5.16.76a.53.53 0 0 1 .3.9l-3.74 3.64a2.12 2.12 0 0 0-.61 1.88l.88 5.14a.53.53 0 0 1-.77.56l-4.62-2.43a2.12 2.12 0 0 0-1.97 0L6.4 21.01a.53.53 0 0 1-.77-.56l.88-5.14a2.12 2.12 0 0 0-.61-1.88L2.16 9.8a.53.53 0 0 1 .3-.91l5.16-.75a2.12 2.12 0 0 0 1.6-1.16z"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-text" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M13 8H7M17 12H7"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></symbol>
+    <symbol id="i-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></symbol>
+    <symbol id="i-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" role="banner">
+  <div class="wrap nav__in">
+    <a class="nav__logo" href="#top" aria-label="GuerillaFi, back to top">
+      <img src="assets/gfi-logo-480.png" width="480" height="121" alt="GuerillaFi" fetchpriority="high">
+    </a>
+    <a class="btn btn--primary btn--sm" href="#book">Book a 15-minute call</a>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+  <!-- 1. HERO -->
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="wrap hero__grid">
+      <div class="hero__head">
+        <p class="eyebrow">For Uni K Wax owners</p>
+        <h1 id="hero-title">The booking system built to keep every <span translate="no">Uni&nbsp;K&nbsp;Wax</span> studio fully&nbsp;booked.</h1>
+      </div>
+      <div class="hero__copy">
+        <p class="lede">We switch on ads, a text bot, a phone agent and follow-up for your studio. Every lead gets an answer in seconds, and every guest gets a nudge back for the next wax. Run from one place, tuned to your studio.</p>
+        <div class="hero__ctas">
+          <a class="btn btn--primary" href="#book">Book a 15-minute call</a>
+          <a class="btn btn--quiet" href="#system">See the system</a>
+        </div>
+        <p class="fine">No forms, no application. Pick a time and talk to Daylon.</p>
+      </div>
+      <div class="hero__video">
+        <!--
+          VIDEO SLOT. Paste Daylon’s video URL into data-video-src below.
+          Works with a YouTube, Vimeo or Loom link, or a direct .mp4 file.
+          Example: data-video-src="https://www.youtube.com/watch?v=XXXXXXXXXXX"
+          Leave it empty and the play button shows a short "coming soon" note.
+        -->
+        <div class="vsl" id="vsl" data-video-src="">
+          <button class="vsl__poster" type="button" id="vsl-play" aria-label="Play Daylon’s 90-second video">
+            <svg class="vsl__art" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+              <defs>
+                <linearGradient id="vslbg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#F7F6FC"/></linearGradient>
+                <radialGradient id="vslglow" cx="160" cy="83" r="74" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FFFFFF" stop-opacity=".94"/><stop offset=".55" stop-color="#FFFFFF" stop-opacity=".6"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></radialGradient>
+              </defs>
+              <rect width="320" height="180" fill="url(#vslbg)"/>
+              <!-- a booked-out week, Mon to Sun: day headers, hour lines, appointments of real lengths, one just booked -->
+              <g fill="#1D1D1F" opacity=".14"><rect x="43" y="15" width="18" height="4" rx="2"/><rect x="83" y="15" width="18" height="4" rx="2"/><rect x="123" y="15" width="18" height="4" rx="2"/><rect x="163" y="15" width="18" height="4" rx="2"/><rect x="203" y="15" width="18" height="4" rx="2"/><rect x="243" y="15" width="18" height="4" rx="2"/><rect x="283" y="15" width="18" height="4" rx="2"/></g>
+              <g stroke="#1D1D1F" stroke-width=".4" opacity=".09"><path d="M30 30H310"/><path d="M30 50H310"/><path d="M30 70H310"/><path d="M30 90H310"/><path d="M30 110H310"/><path d="M30 130H310"/><path d="M30 150H310"/></g>
+              <g stroke="#1D1D1F" stroke-width="1" stroke-linecap="round" opacity=".14"><path d="M14 30H24"/><path d="M14 50H24"/><path d="M14 70H24"/><path d="M14 90H24"/><path d="M14 110H24"/><path d="M14 130H24"/><path d="M14 150H24"/></g>
+              <g fill="#4F3DD6" opacity=".15"><rect x="34" y="32" width="36" height="24" rx="3"/><rect x="34" y="78" width="36" height="34" rx="3"/><rect x="34" y="138" width="36" height="14" rx="3"/><rect x="74" y="48" width="36" height="36" rx="3"/><rect x="74" y="110" width="36" height="38" rx="3"/><rect x="114" y="32" width="36" height="30" rx="3"/><rect x="114" y="90" width="36" height="18" rx="3"/><rect x="154" y="56" width="36" height="32" rx="3"/><rect x="154" y="120" width="36" height="30" rx="3"/><rect x="194" y="32" width="36" height="36" rx="3"/><rect x="194" y="88" width="36" height="28" rx="3"/><rect x="234" y="52" width="36" height="28" rx="3"/><rect x="274" y="32" width="36" height="28" rx="3"/><rect x="274" y="84" width="36" height="32" rx="3"/><rect x="274" y="142" width="36" height="10" rx="3"/></g>
+              <g fill="#4F3DD6" opacity=".09"><rect x="34" y="58" width="36" height="18" rx="3"/><rect x="34" y="114" width="36" height="22" rx="3"/><rect x="74" y="32" width="36" height="14" rx="3"/><rect x="74" y="86" width="36" height="22" rx="3"/><rect x="114" y="64" width="36" height="24" rx="3"/><rect x="114" y="110" width="36" height="38" rx="3"/><rect x="154" y="32" width="36" height="22" rx="3"/><rect x="154" y="90" width="36" height="28" rx="3"/><rect x="194" y="70" width="36" height="16" rx="3"/><rect x="194" y="118" width="36" height="30" rx="3"/><rect x="234" y="32" width="36" height="18" rx="3"/><rect x="234" y="120" width="36" height="30" rx="3"/><rect x="274" y="62" width="36" height="20" rx="3"/><rect x="274" y="118" width="36" height="22" rx="3"/></g>
+              <g fill="#4F3DD6" opacity=".55"><rect x="34" y="32" width="2" height="24" rx="1"/><rect x="34" y="58" width="2" height="18" rx="1"/><rect x="34" y="78" width="2" height="34" rx="1"/><rect x="34" y="114" width="2" height="22" rx="1"/><rect x="34" y="138" width="2" height="14" rx="1"/><rect x="74" y="32" width="2" height="14" rx="1"/><rect x="74" y="48" width="2" height="36" rx="1"/><rect x="74" y="86" width="2" height="22" rx="1"/><rect x="74" y="110" width="2" height="38" rx="1"/><rect x="114" y="32" width="2" height="30" rx="1"/><rect x="114" y="64" width="2" height="24" rx="1"/><rect x="114" y="90" width="2" height="18" rx="1"/><rect x="114" y="110" width="2" height="38" rx="1"/><rect x="154" y="32" width="2" height="22" rx="1"/><rect x="154" y="56" width="2" height="32" rx="1"/><rect x="154" y="90" width="2" height="28" rx="1"/><rect x="154" y="120" width="2" height="30" rx="1"/><rect x="194" y="32" width="2" height="36" rx="1"/><rect x="194" y="70" width="2" height="16" rx="1"/><rect x="194" y="88" width="2" height="28" rx="1"/><rect x="194" y="118" width="2" height="30" rx="1"/><rect x="234" y="32" width="2" height="18" rx="1"/><rect x="234" y="52" width="2" height="28" rx="1"/><rect x="234" y="120" width="2" height="30" rx="1"/><rect x="274" y="32" width="2" height="28" rx="1"/><rect x="274" y="62" width="2" height="20" rx="1"/><rect x="274" y="84" width="2" height="32" rx="1"/><rect x="274" y="118" width="2" height="22" rx="1"/><rect x="274" y="142" width="2" height="10" rx="1"/></g>
+              <g fill="#4F3DD6" opacity=".32"><rect x="39" y="37" width="14" height="2" rx="1"/><rect x="39" y="63" width="14" height="2" rx="1"/><rect x="39" y="83" width="20" height="2" rx="1"/><rect x="39" y="119" width="14" height="2" rx="1"/><rect x="79" y="53" width="20" height="2" rx="1"/><rect x="79" y="91" width="14" height="2" rx="1"/><rect x="79" y="115" width="20" height="2" rx="1"/><rect x="119" y="37" width="20" height="2" rx="1"/><rect x="119" y="69" width="14" height="2" rx="1"/><rect x="119" y="95" width="14" height="2" rx="1"/><rect x="119" y="115" width="20" height="2" rx="1"/><rect x="159" y="37" width="14" height="2" rx="1"/><rect x="159" y="61" width="20" height="2" rx="1"/><rect x="159" y="95" width="20" height="2" rx="1"/><rect x="159" y="125" width="20" height="2" rx="1"/><rect x="199" y="37" width="20" height="2" rx="1"/><rect x="199" y="93" width="20" height="2" rx="1"/><rect x="199" y="123" width="20" height="2" rx="1"/><rect x="239" y="37" width="14" height="2" rx="1"/><rect x="239" y="57" width="20" height="2" rx="1"/><rect x="239" y="125" width="20" height="2" rx="1"/><rect x="279" y="37" width="20" height="2" rx="1"/><rect x="279" y="67" width="14" height="2" rx="1"/><rect x="279" y="89" width="20" height="2" rx="1"/><rect x="279" y="123" width="14" height="2" rx="1"/></g>
+              <g fill="#4F3DD6"><rect x="234" y="82" width="36" height="36" rx="3"/><rect x="239" y="88" width="18" height="2.4" rx="1.2" fill="#FFFFFF" opacity=".9"/><rect x="239" y="93" width="12" height="2" rx="1" fill="#FFFFFF" opacity=".6"/></g>
+              <rect width="320" height="180" fill="url(#vslglow)"/>
+            </svg>
+            <span class="vsl__play" aria-hidden="true"><svg class="ic ic--fill"><use href="#i-play"/></svg></span>
+            <span class="vsl__caption"><strong translate="no">Daylon Bennett</strong>, GuerillaFi, 90 seconds</span>
+            <span class="vsl__bar" aria-hidden="true"></span>
+          </button>
+          <p class="vsl__note" id="vsl-note" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. PROOF STRIP -->
+  <section class="proof" aria-labelledby="proof-title">
+    <div class="wrap">
+      <h2 class="proof__title" id="proof-title">Measured at Uni K Wax Scottsdale, two studios</h2>
+      <dl class="proof__grid">
+        <div class="stat">
+          <dt class="stat__label">of funnel leads book</dt>
+          <dd class="stat__num num">56<span class="u">%</span></dd>
+          <dd class="stat__win">440 of 780 contacts, Jul 15 to Oct 18, 2026</dd>
+        </div>
+        <div class="stat">
+          <dt class="stat__label">median first text reply</dt>
+          <dd class="stat__num num">14.5<span class="u">&nbsp;s</span></dd>
+          <dd class="stat__win">272 of 272 guest turns answered, Sep 15 to Oct 28, 2026</dd>
+        </div>
+        <div class="stat">
+          <dt class="stat__label">of leads arrive after hours</dt>
+          <dd class="stat__num num">38<span class="u">%</span></dd>
+          <dd class="stat__win">Answered anyway. Sep 15 to Oct 28, 2026</dd>
+        </div>
+        <div class="stat">
+          <dt class="stat__label">of paid leads booked</dt>
+          <dd class="stat__num num">52.7<span class="u">%</span></dd>
+          <dd class="stat__win">$83.57 media cost per appointment, Scottsdale, Apr to Sep 2026 cohort</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- 3. THE SYSTEM -->
+  <section class="section" id="system" aria-labelledby="system-title">
+    <div class="wrap system">
+      <div class="head">
+        <h2 id="system-title">One system, five stages</h2>
+        <p>Every guest moves through the same five steps. When we switch the system on, we run each one for your studio.</p>
+      </div>
+      <ol class="stages">
+        <li class="stage">
+          <span class="stage__icon" aria-hidden="true"><svg class="ic"><use href="#i-search"/></svg></span>
+          <h3>Found</h3>
+          <p>Your studio gets Google posts, review asks and local content, so it shows up first nearby.</p>
+        </li>
+        <li class="stage">
+          <span class="stage__icon" aria-hidden="true"><svg class="ic"><use href="#i-click"/></svg></span>
+          <h3>Clicked</h3>
+          <p>Every ad goes straight to the booking funnel with your offer on top.</p>
+        </li>
+        <li class="stage">
+          <span class="stage__icon" aria-hidden="true"><svg class="ic"><use href="#i-cal-check"/></svg></span>
+          <h3>Booked</h3>
+          <p>The moment a lead clicks, the AI takes over. It texts first, calls if nobody answers, and books the slot itself. By text, from Mia on the phone, or in an Instagram DM.</p>
+          <ol class="beats" aria-label="What happens after the click">
+            <li class="beat">
+              <span class="beat__when"><svg class="ic" aria-hidden="true"><use href="#i-text"/></svg>Within a minute</span>
+              <p class="beat__bubble">It's Jess at Uni K Wax! What were you thinking about getting waxed?</p>
+              <p class="beat__note">The AI replies first, every time, day or night. At Uni K Wax it answered 272 of 272 guest turns, median 14.5 seconds, and 38% of leads came in after hours.</p>
+            </li>
+            <li class="beat">
+              <span class="beat__when"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>10 minutes, no reply</span>
+              <p class="beat__card"><strong>Mia calls.</strong> She offers two real openings at the nearest studio and books the one the guest picks.</p>
+            </li>
+            <li class="beat">
+              <span class="beat__when"><svg class="ic" aria-hidden="true"><use href="#i-cal-check"/></svg>Booked</span>
+              <p class="beat__card"><strong>On the calendar.</strong> Confirmation text, reminder texts, and the studio sees it in its booking system. If the guest texts back at any point, the text AI picks it up.</p>
+            </li>
+          </ol>
+          <p class="src">Reply speed and after-hours share: Uni K Wax, Sep 15 to Oct 28, 2026.</p>
+        </li>
+        <li class="stage">
+          <span class="stage__icon" aria-hidden="true"><svg class="ic"><use href="#i-repeat"/></svg></span>
+          <h3>Kept</h3>
+          <p>Guests get a skin check at 24 to 48 hours, a “due for your next wax” text at 4 to 6 weeks, and a no&#8209;show recovery text.</p>
+        </li>
+        <li class="stage">
+          <span class="stage__icon" aria-hidden="true"><svg class="ic"><use href="#i-chart"/></svg></span>
+          <h3>Counted</h3>
+          <p>You get one scoreboard per studio, every week, with the dates each number covers.</p>
+        </li>
+      </ol>
+      <p class="registry">We set your studio up as one row of settings. Prices, hours and the offer are typed once, and every channel reads them.</p>
+    </div>
+  </section>
+
+  <!-- 4. THE FLYWHEEL -->
+  <section class="section section--wash" id="flywheel" aria-labelledby="fly-title">
+    <div class="wrap">
+      <div class="head">
+        <h2 id="fly-title">The flywheel: ten spokes that keep the calendar full</h2>
+        <p>Tap a spoke to see what it does. At first the studio runs some spokes by hand. We automate them one by one.</p>
+      </div>
+
+      <div class="fly">
+        <div class="fly__wheelwrap">
+          <div class="wheel" style="--sel:0">
+            <svg class="wheel__svg" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <circle class="wheel__ring" cx="50" cy="50" r="40"/>
+              <g class="wheel__spokes">
+                <line x1="50" y1="38" x2="50" y2="10" style="--i:0"/>
+                <line x1="50" y1="38" x2="50" y2="10" style="--i:1"/>
+                <line x1="50" y1="38" x2="50" y2="10" style="--i:2"/>
+                <line x1="50" y1="38" x2="50" y2="10" style="--i:3"/>
+                <line x1="50" y1="38" x2="50" y2="10" style="--i:4"/>
+                <line x1="50" y1="38" x2="50" y2="10" style="--i:5"/>
+                <line x1="50" y1="38" x2="50" y2="10" style="--i:6"/>
+                <line x1="50" y1="38" x2="50" y2="10" style="--i:7"/>
+                <line x1="50" y1="38" x2="50" y2="10" style="--i:8"/>
+                <line x1="50" y1="38" x2="50" y2="10" style="--i:9"/>
+              </g>
+              <g class="wheel__pointer">
+                <circle class="wheel__arc" cx="50" cy="50" r="40" pathLength="360"/>
+                <line class="wheel__active" x1="50" y1="38" x2="50" y2="10"/>
+              </g>
+            </svg>
+            <div class="wheel__hub" aria-hidden="true"><img src="assets/favicon-hub.png" width="96" height="96" alt="" loading="lazy"></div>
+
+            <div class="wheel__tabs" role="tablist" aria-label="Flywheel spokes">
+              <button class="spoke" role="tab" type="button" id="t-0" aria-controls="p-0" aria-selected="true" tabindex="0" style="--i:0"><span class="spoke__dot"><svg class="ic"><use href="#i-search"/></svg></span><span class="spoke__label">Google ads</span></button>
+              <button class="spoke" role="tab" type="button" id="t-1" aria-controls="p-1" aria-selected="false" tabindex="-1" style="--i:1"><span class="spoke__dot"><svg class="ic"><use href="#i-megaphone"/></svg></span><span class="spoke__label">Meta ads</span></button>
+              <button class="spoke" role="tab" type="button" id="t-2" aria-controls="p-2" aria-selected="false" tabindex="-1" style="--i:2"><span class="spoke__dot"><svg class="ic"><use href="#i-video"/></svg></span><span class="spoke__label">TikTok and Instagram</span></button>
+              <button class="spoke" role="tab" type="button" id="t-3" aria-controls="p-3" aria-selected="false" tabindex="-1" style="--i:3"><span class="spoke__dot"><svg class="ic"><use href="#i-message"/></svg></span><span class="spoke__label">100 DMs a day</span></button>
+              <button class="spoke" role="tab" type="button" id="t-4" aria-controls="p-4" aria-selected="false" tabindex="-1" style="--i:4"><span class="spoke__dot"><svg class="ic"><use href="#i-clock"/></svg></span><span class="spoke__label">Unbooked leads, same day</span></button>
+              <button class="spoke" role="tab" type="button" id="t-5" aria-controls="p-5" aria-selected="false" tabindex="-1" style="--i:5"><span class="spoke__dot"><svg class="ic"><use href="#i-pin"/></svg></span><span class="spoke__label">Google Business Profile</span></button>
+              <button class="spoke" role="tab" type="button" id="t-6" aria-controls="p-6" aria-selected="false" tabindex="-1" style="--i:6"><span class="spoke__dot"><svg class="ic"><use href="#i-star"/></svg></span><span class="spoke__label">Reviews every visit</span></button>
+              <button class="spoke" role="tab" type="button" id="t-7" aria-controls="p-7" aria-selected="false" tabindex="-1" style="--i:7"><span class="spoke__dot"><svg class="ic"><use href="#i-users"/></svg></span><span class="spoke__label">Referral partners</span></button>
+              <button class="spoke" role="tab" type="button" id="t-8" aria-controls="p-8" aria-selected="false" tabindex="-1" style="--i:8"><span class="spoke__dot"><svg class="ic"><use href="#i-cal-plus"/></svg></span><span class="spoke__label">Rebooking in the room</span></button>
+              <button class="spoke" role="tab" type="button" id="t-9" aria-controls="p-9" aria-selected="false" tabindex="-1" style="--i:9"><span class="spoke__dot"><svg class="ic"><use href="#i-refresh"/></svg></span><span class="spoke__label">Due and win-back texts</span></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="fly__panels">
+          <div class="fly__nav" hidden>
+            <button class="iconbtn" type="button" id="fly-prev" aria-label="Previous spoke"><svg class="ic"><use href="#i-left"/></svg></button>
+            <p class="fly__count num" id="fly-count" aria-hidden="true">1 of 10</p>
+            <button class="iconbtn" type="button" id="fly-next" aria-label="Next spoke"><svg class="ic"><use href="#i-right"/></svg></button>
+          </div>
+
+          <!-- Spoke 1: Uni K Wax's real Google search ads (ads.json, Google Ads Transparency Center). Ad text is theirs, verbatim. -->
+          <article class="panel panel--media is-on" role="tabpanel" id="p-0" aria-labelledby="t-0" tabindex="0">
+            <h3>Google ads</h3>
+            <div class="serp" role="list" aria-label="Live Google ads by Uni K Wax">
+              <div class="gad" role="listitem">
+                <p class="gad__sp">Sponsored</p>
+                <p class="gad__site"><img class="gad__fav" src="assets/ads/ig_profile.webp" width="28" height="28" alt="" loading="lazy" decoding="async"><span class="gad__who"><span class="gad__name">Uni K Wax</span><span class="gad__url">unikwaxaz.com</span></span></p>
+                <p class="gad__h">Walk-Ins Welcome Today - Scottsdale Waxing Studio</p>
+                <p class="gad__d">Two Scottsdale locations &#8212; Pima Crossing &amp; Lincoln Village. Book online or walk in!</p>
+              </div>
+              <div class="gad" role="listitem">
+                <p class="gad__sp">Sponsored</p>
+                <p class="gad__site"><img class="gad__fav" src="assets/ads/ig_profile.webp" width="28" height="28" alt="" loading="lazy" decoding="async"><span class="gad__who"><span class="gad__name">Uni K Wax</span><span class="gad__url">www.unikwaxaz.com</span></span></p>
+                <p class="gad__h">50% Off Your First Wax - Scottsdale Waxing Studio</p>
+                <p class="gad__d">Never waxed before? Our licensed specialists make your first visit easy and comfortable. New clients get 50% off their first service. Book online...</p>
+                <p class="gad__ex">Waxing hair removal service · Scottsdale · North Scottsdale Road · <span class="gad__rate">5.0 <svg class="ic ic--fill" aria-hidden="true"><use href="#i-star"/></svg> (121)</span></p>
+                <ul class="gad__links"><li>50% Off First Visit</li><li>Book an Appointment</li><li>Book...</li></ul>
+              </div>
+              <div class="gad" role="listitem">
+                <p class="gad__sp">Sponsored</p>
+                <p class="gad__site"><img class="gad__fav" src="assets/ads/ig_profile.webp" width="28" height="28" alt="" loading="lazy" decoding="async"><span class="gad__who"><span class="gad__name">Uni K Wax</span><span class="gad__url">www.unikwaxaz.com</span></span></p>
+                <p class="gad__h">Book Online in Seconds - 25% Off Your Entire Order</p>
+                <p class="gad__d">New clients: 25% off your entire order. Book online today!</p>
+                <p class="gad__ex">Waxing hair removal service · Scottsdale · East Shea Boulevard · <span class="gad__rate">5.0 <svg class="ic ic--fill" aria-hidden="true"><use href="#i-star"/></svg> (145)</span></p>
+                <ul class="gad__links"><li>Book an Appointment</li><li>2 Scottsdale Locations</li><li>All Services</li></ul>
+              </div>
+              <div class="gad gad--local" role="listitem">
+                <p class="gad__sp">Sponsored</p>
+                <p class="gad__h gad__h--local">Uni K Wax | Shea and 101- All Natural Waxing ...</p>
+                <p class="gad__ex"><span class="gad__rate">5.0 <svg class="ic ic--fill" aria-hidden="true"><use href="#i-star"/></svg> (116)</span></p>
+                <p class="gad__ex">Waxing hair removal service · <span class="gad__open">Open</span></p>
+                <p class="gad__btns"><span class="gad__btn"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Call</span><span class="gad__btn"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg>Directions</span></p>
+              </div>
+            </div>
+            <p>91% show rate, about $65 per lead. Ads land on the funnel with the offer on top.</p>
+            <dl class="tags"><div><dt>Now</dt><dd>Run by GuerillaFi</dd></div><div><dt>Later</dt><dd>Automated: cost per booking per studio on the scoreboard</dd></div></dl>
+            <p class="src">Show rate and cost: Daylon’s figures, Nov 2, 2026, Scottsdale, pending the ad account export.</p>
+            <p class="src">Live ads, Google Ads Transparency Center, last shown Nov 2, 2026.</p>
+          </article>
+
+          <!-- Spoke 2: Uni K Wax Arizona's real Meta ads (ads.json, Meta Ad Library). Default = library 28927950736870580; app.js swaps the unit from the thumbnails. -->
+          <article class="panel panel--media" role="tabpanel" id="p-1" aria-labelledby="t-1" tabindex="0">
+            <h3>Meta ads</h3>
+            <div class="adstage">
+              <figure class="fbad" id="fbad" aria-label="Live Meta ad by Uni K Wax Arizona, as it shows in the feed">
+                <div class="fbad__head">
+                  <img class="fbad__avatar" src="assets/ads/ig_profile.webp" width="40" height="40" alt="" loading="lazy" decoding="async">
+                  <span class="fbad__who"><strong>Uni K Wax Arizona</strong><span class="fbad__sp">Sponsored <svg class="ic" aria-hidden="true"><use href="#i-globe"/></svg></span></span>
+                </div>
+                <div class="fbad__text" id="fbad-text">
+                  <p class="fbad__lead"><span id="fbad-lead">A Brazilian you don't have to brace for.</span> <button class="fbad__see" type="button" id="fbad-see" aria-expanded="false" aria-controls="fbad-more">See more</button></p>
+                  <div class="fbad__more" id="fbad-more" tabindex="-1" hidden>
+                    <p>Experienced waxers, all-natural elastic wax, and a studio that doesn't rush you through it &#8212; so your results stay consistent instead of fighting ingrowns between every appointment.</p>
+                    <p>First-time guests get 25% off your entire first order. Now open at multiple locations across the valley.</p>
+                    <p>Book your service online below.</p>
+                  </div>
+                </div>
+                <div class="fbad__media" id="fbad-media">
+                  <img class="fbad__poster" id="fbad-poster" src="assets/ads/meta_28927950736870580_poster.webp" width="540" height="960" alt="Frame from the ad, on-screen text: What if" loading="lazy" decoding="async">
+                  <video class="fbad__video" id="fbad-video" muted playsinline loop preload="none" poster="assets/ads/meta_28927950736870580_poster.webp" data-src="assets/ads/meta_28927950736870580_loop.mp4" aria-hidden="true" tabindex="-1" disablepictureinpicture disableremoteplayback></video>
+                  <button class="fbad__toggle" type="button" id="fbad-toggle" aria-label="Play the ad video" hidden><svg class="ic ic--fill ic-play" aria-hidden="true"><use href="#i-play"/></svg><svg class="ic ic--fill ic-pause" aria-hidden="true"><use href="#i-pause"/></svg></button>
+                </div>
+                <div class="fbad__card">
+                  <span class="fbad__cardtext">
+                    <span class="fbad__link" id="fbad-link">UNIKWAXSTUDIO.COM</span>
+                    <strong class="fbad__h" id="fbad-h">25% Off Your First Order</strong>
+                    <span class="fbad__d" id="fbad-d">Now open valley-wide</span>
+                  </span>
+                  <span class="fbad__cta" id="fbad-cta">Book now</span>
+                </div>
+              </figure>
+              <div class="adthumbs" role="group" aria-label="Live Meta ads, pick one to preview">
+                <button class="adthumb" type="button" data-ad="0" aria-pressed="true" aria-label="Ad 1 of 5, opens with: What if"><img src="assets/ads/meta_28927950736870580_poster.webp" width="540" height="960" alt="" loading="lazy" decoding="async"></button>
+                <button class="adthumb" type="button" data-ad="1" aria-pressed="false" aria-label="Ad 2 of 5, opens with: Arizona summers make"><img src="assets/ads/meta_1122593966810701_poster.webp" width="540" height="960" alt="" loading="lazy" decoding="async"></button>
+                <button class="adthumb" type="button" data-ad="2" aria-pressed="false" aria-label="Ad 3 of 5, opens with: Waxing gets a"><img src="assets/ads/meta_1128244913365083_poster.webp" width="540" height="960" alt="" loading="lazy" decoding="async"></button>
+                <button class="adthumb" type="button" data-ad="3" aria-pressed="false" aria-label="Ad 4 of 5, a guest testimonial"><img src="assets/ads/meta_1481290280559778_poster.webp" width="540" height="960" alt="" loading="lazy" decoding="async"></button>
+                <button class="adthumb" type="button" data-ad="4" aria-pressed="false" aria-label="Ad 5 of 5, opens with: What truly"><img src="assets/ads/meta_2071516706853486_poster.webp" width="540" height="960" alt="" loading="lazy" decoding="async"></button>
+              </div>
+            </div>
+            <figure class="hook">
+              <figcaption class="hook__label">First line of the ad</figcaption>
+              <blockquote class="hook__q"><p id="ad-hook">“What if your Brazilian wax felt comfortable instead of something you just have to get through for bikini season?”</p></blockquote>
+            </figure>
+            <p>29% show rate, about $25 per lead. Boost only the post that already booked guests.</p>
+            <dl class="tags"><div><dt>Now</dt><dd>Run by GuerillaFi</dd></div><div><dt>Later</dt><dd>Automated: optimized for booked appointments, not leads</dd></div></dl>
+            <p class="src">Show rate and cost: Daylon’s figures, Nov 2, 2026, Scottsdale, pending the ad account export.</p>
+            <p class="src">Live ads, Meta Ad Library, started Oct 31, 2026.</p>
+          </article>
+
+          <!-- Spoke 3: the real corporate Instagram and TikTok profiles (ads.json, checked Nov 3, 2026) and two frames from the Oct 31 ad films. -->
+          <article class="panel panel--media" role="tabpanel" id="p-2" aria-labelledby="t-2" tabindex="0">
+            <h3>TikTok and Instagram content</h3>
+            <p>2 to 3 short videos a day with the city on screen. Instagram 2 to 3 times a week.</p>
+            <div class="profs">
+              <section class="prof prof--ig" aria-label="Instagram profile @unikwaxstudios">
+                <p class="prof__bar"><span class="prof__app">Instagram</span><span class="chip">Corporate account</span></p>
+                <div class="ig__row">
+                  <img class="prof__avatar" src="assets/ads/ig_profile.webp" width="64" height="64" alt="" loading="lazy" decoding="async">
+                  <div class="ig__id">
+                    <p class="prof__handle">@unikwaxstudios</p>
+                    <dl class="prof__stats">
+                      <div><dt>followers</dt><dd class="num">6,169</dd></div>
+                      <div><dt>following</dt><dd class="num">237</dd></div>
+                    </dl>
+                  </div>
+                </div>
+                <p class="prof__name">Uni K Wax Franchising</p>
+                <p class="prof__bio">34 Open Locations | 20+ Coming Soon!<br>All Natural, Gluten Free ElastiKWax<br>No wax strips. No Double Dipping. Ever!</p>
+                <ul class="ig__hl" aria-label="Story highlights">
+                  <li><img class="ig__ring" src="assets/ads/ig_hl1.webp" width="48" height="48" alt="" loading="lazy" decoding="async">About our wax</li>
+                  <li><img class="ig__ring" src="assets/ads/ig_hl2.webp" width="48" height="48" alt="" loading="lazy" decoding="async">Skin</li>
+                  <li><img class="ig__ring" src="assets/ads/ig_hl3.webp" width="48" height="48" alt="" loading="lazy" decoding="async">Promotions</li>
+                  <li><img class="ig__ring" src="assets/ads/ig_hl4.webp" width="48" height="48" alt="" loading="lazy" decoding="async">In the News</li>
+                </ul>
+              </section>
+              <section class="prof prof--tt" aria-label="TikTok profile @unikwaxstudios">
+                <p class="prof__bar"><span class="prof__app">TikTok</span><span class="chip">Corporate account</span></p>
+                <img class="prof__avatar" src="assets/ads/ig_profile.webp" width="64" height="64" alt="" loading="lazy" decoding="async">
+                <p class="prof__handle">@unikwaxstudios</p>
+                <p class="prof__name">UniKWaxStudios</p>
+                <dl class="prof__stats prof__stats--tt">
+                  <div><dt>Following</dt><dd class="num">18</dd></div>
+                  <div><dt>Followers</dt><dd class="num">105</dd></div>
+                  <div><dt>Likes</dt><dd class="num">897</dd></div>
+                </dl>
+                <p class="prof__bio">The only wax made from nature's best.<br>New customers get 50% off their first wax</p>
+              </section>
+            </div>
+            <p class="honest">The Scottsdale studios have no account of their own yet. The Oct 31 ad films are the first local footage; the plan is 2 to 3 short local videos a day cut from footage like this.</p>
+            <div class="films">
+              <figure class="film"><img src="assets/ads/meta_28927950736870580_poster.webp" width="540" height="960" alt="Frame from the Oct 31 ad film, on-screen text: What if" loading="lazy" decoding="async"><figcaption>“What if”</figcaption></figure>
+              <figure class="film"><img src="assets/ads/meta_1122593966810701_poster.webp" width="540" height="960" alt="Frame from the Oct 31 ad film, on-screen text: Arizona summers make" loading="lazy" decoding="async"><figcaption>“Arizona summers make”</figcaption></figure>
+            </div>
+            <dl class="tags"><div><dt>Now</dt><dd>Manual by the studio</dd></div><div><dt>Later</dt><dd>Automated: drafted from the studio’s own photos and clips</dd></div></dl>
+            <p class="src">Public profiles as of Nov 3, 2026.</p>
+          </article>
+          <article class="panel" role="tabpanel" id="p-3" aria-labelledby="t-3" tabindex="0">
+            <h3>100 DMs a day</h3>
+            <p>Warm first: past guests, followers, people who asked but never booked. One offer, one proof point, one question.</p>
+            <dl class="tags"><div><dt>Now</dt><dd>Manual by the studio</dd></div><div><dt>Later</dt><dd>Automated: keyword DMs answered by the bot</dd></div></dl>
+          </article>
+          <article class="panel" role="tabpanel" id="p-4" aria-labelledby="t-4" tabindex="0">
+            <h3>Unbooked leads, same day</h3>
+            <p>The few leads a day the bot could not book (about 3 to 5 at Uni K Wax Scottsdale, Daylon, Nov 2, 2026) get a personal DM or text with two real times.</p>
+            <dl class="tags"><div><dt>Now</dt><dd>Manual by the studio</dd></div><div><dt>Later</dt><dd>Automated: the bot follows up with fresh openings</dd></div></dl>
+          </article>
+          <article class="panel" role="tabpanel" id="p-5" aria-labelledby="t-5" tabindex="0">
+            <h3>Google Business Profile</h3>
+            <p>One post every open day, drafted from the studio’s own photos. Reply to every review with local words.</p>
+            <dl class="tags"><div><dt>Now</dt><dd>Manual by the studio</dd></div><div><dt>Later</dt><dd>Automated: drafts ready for the studio to approve</dd></div></dl>
+          </article>
+          <article class="panel" role="tabpanel" id="p-6" aria-labelledby="t-6" tabindex="0">
+            <h3>Reviews every visit</h3>
+            <p>Ask by text a few days after the service, and skip guests who already reviewed. A small thank-you on the next visit.</p>
+            <dl class="tags"><div><dt>Now</dt><dd>Manual by the studio</dd></div><div><dt>Later</dt><dd>Automated after every closed visit</dd></div></dl>
+          </article>
+          <article class="panel" role="tabpanel" id="p-7" aria-labelledby="t-7" tabindex="0">
+            <h3>Referral partners</h3>
+            <p>A handful of referral partners per studio: lash, nails, massage, spray tan, gym. Trade referrals both ways, like BNI.</p>
+            <dl class="tags"><div><dt>Now</dt><dd>Manual by the studio</dd></div><div><dt>Later</dt><dd>Automated: referrals tracked on the scoreboard</dd></div></dl>
+          </article>
+          <article class="panel" role="tabpanel" id="p-8" aria-labelledby="t-8" tabindex="0">
+            <h3>Rebooking in the room</h3>
+            <p>Book the next visit 4 weeks out before checkout. 3 to 4 visits, 4 to 6 weeks apart.</p>
+            <dl class="tags"><div><dt>Now</dt><dd>Manual by the waxer</dd></div><div><dt>Later</dt><dd>Automated: a come-back text if they leave without one</dd></div></dl>
+          </article>
+          <article class="panel" role="tabpanel" id="p-9" aria-labelledby="t-9" tabindex="0">
+            <h3>Due and win-back texts</h3>
+            <p>“You’re due” with two real times at 4 to 6 weeks, a different message at 90 days. Booked means stop.</p>
+            <dl class="tags"><div><dt>Now</dt><dd>Manual by the studio</dd></div><div><dt>Later</dt><dd>Automated from each guest’s last visit</dd></div></dl>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. WHAT YOUR LOCATIONS GET -->
+  <section class="section" id="get" aria-labelledby="get-title">
+    <div class="wrap">
+      <div class="head">
+        <h2 id="get-title">What your locations get</h2>
+        <p>We run it centrally and tune it per studio. Your team’s job is the guest in the room.</p>
+      </div>
+      <ul class="gets">
+        <li class="get">
+          <span class="get__icon" aria-hidden="true"><svg class="ic"><use href="#i-target"/></svg></span>
+          <h3>Google and Meta ads, per market</h3>
+          <p>We run campaigns for each city. Every ad lands on the booking funnel with your offer on top, judged by bookings, not clicks.</p>
+        </li>
+        <li class="get">
+          <span class="get__icon" aria-hidden="true"><svg class="ic"><use href="#i-layers"/></svg></span>
+          <h3>One approved offer and creative library</h3>
+          <p>Your offer is approved once, and we set every ad, text, voicemail and post to read the same line.</p>
+        </li>
+        <li class="get">
+          <span class="get__icon" aria-hidden="true"><svg class="ic"><use href="#i-database"/></svg></span>
+          <h3>One CRM across every studio</h3>
+          <p>Every lead and conversation lands in GoHighLevel, studio by studio, in one place HQ can see.</p>
+        </li>
+        <li class="get">
+          <span class="get__icon" aria-hidden="true"><svg class="ic"><use href="#i-phone"/></svg></span>
+          <h3>AI follow-up by text, phone and DM</h3>
+          <p>Your studio gets a text bot, Mia on the phone and Instagram DM replies, managed centrally and tuned to your hours, prices and openings.</p>
+        </li>
+        <li class="get">
+          <span class="get__icon" aria-hidden="true"><svg class="ic"><use href="#i-chart"/></svg></span>
+          <h3>A scoreboard per location</h3>
+          <p>You get leads, replies, bookings, second-visit rate, reviews and no-shows for each location, every week, with the dates each number covers.</p>
+        </li>
+        <li class="get">
+          <span class="get__icon" aria-hidden="true"><svg class="ic"><use href="#i-shield"/></svg></span>
+          <h3>Brand at HQ, full calendars at the studio</h3>
+          <p>Copy and compliance are approved once and held centrally. Every text we send carries the opt-out line.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 6. RESULTS WITH NAMES -->
+  <section class="section section--wash" id="results" aria-labelledby="results-title">
+    <div class="wrap">
+      <div class="head">
+        <h2 id="results-title">Results, with names on them</h2>
+        <p>Real studios, real numbers. Every number shows the dates it covers.</p>
+      </div>
+
+      <article class="case" aria-labelledby="case-ukw">
+        <div class="case__story">
+          <h3 id="case-ukw" translate="no">Uni K Wax Scottsdale</h3>
+          <p class="case__meta">2 studios: Pima Crossing and Lincoln Market</p>
+          <p>Leads from Google and Meta landed on one booking page with the first-visit offer on top. From Sep 15 to Oct 28, 2026, the text bot replied first on 272 of 272 guest turns, with a median of 14.5 seconds, and 38% of leads arrived after hours.</p>
+        </div>
+        <dl class="case__stats">
+          <div>
+            <dt>Funnel leads booked</dt>
+            <dd class="case__num num">56<span class="u">%</span></dd>
+            <dd class="case__win">440 of 780 contacts, Jul 15 to Oct 18, 2026</dd>
+          </div>
+          <div>
+            <dt>Paid leads booked</dt>
+            <dd class="case__num num">631</dd>
+            <dd class="case__win">of 1,197 (52.7%), Scottsdale, Apr to Sep 2026 cohort</dd>
+          </div>
+          <div>
+            <dt>Bookings by text bot and Mia</dt>
+            <dd class="case__num num">23</dd>
+            <dd class="case__win">15 by text, 8 by phone, Sep 15 to Oct 28, 2026</dd>
+          </div>
+          <div>
+            <dt>Reply to the first text</dt>
+            <dd class="case__num num">25<span class="u">%</span></dd>
+            <dd class="case__win">184 sent, 12 booked, Sep 15 to Oct 28, 2026</dd>
+          </div>
+        </dl>
+      </article>
+
+      <!-- EDITORIAL: replace this card with a second named client result (name, locations, story, 3 to 4 numbers each with its window). -->
+      <aside class="draft draft--card" aria-label="Draft note">
+        <p class="draft__tag">Draft note</p>
+        <p><strong>Add client.</strong> A second named result goes here: client name, number of locations, two lines of story and three numbers, each with the dates it covers.</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 7. HOW IT WORKS -->
+  <section class="section" id="how" aria-labelledby="how-title">
+    <div class="wrap">
+      <div class="head">
+        <h2 id="how-title">How it works</h2>
+        <p>Three steps. Your team keeps waxing the whole time.</p>
+      </div>
+      <ol class="steps">
+        <li class="step">
+          <span class="step__n num" aria-hidden="true">1</span>
+          <h3>A 15-minute call</h3>
+          <p>Tell us your studios, your hours and where your leads come from. We tell you straight if it fits.</p>
+        </li>
+        <li class="step">
+          <span class="step__n num" aria-hidden="true">2</span>
+          <h3>We switch on your first studios</h3>
+          <p>We set each studio up as a row of settings: hours, prices, offer, calendar. Settings, not a rebuild.</p>
+        </li>
+        <li class="step">
+          <span class="step__n num" aria-hidden="true">3</span>
+          <h3>You watch the scoreboard</h3>
+          <p>Every week you get leads, replies, bookings and reviews per studio, with the dates each number covers.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 8. BOOK (final CTA). Put Daylon’s calendar link in data-calendar-url. -->
+  <section class="book" id="book" aria-labelledby="book-title" data-calendar-url="https://link.guerillafi.com/widget/booking/Cg8SC4a5Mnku3Z3tgoCA">
+    <div class="wrap book__grid">
+      <div class="book__copy">
+        <h2 id="book-title">Talk to Daylon for 15 minutes</h2>
+        <p>No forms, no application. Pick a time, and Daylon walks you through what this looks like for your studios.</p>
+        <a class="btn btn--primary" id="book-btn" href="#book-cal">Book a 15-minute call</a>
+      </div>
+      <div class="book__cal" id="book-cal" tabindex="-1">
+        <div class="cal-ph">
+          <span class="cal-ph__icon" aria-hidden="true"><svg class="ic"><use href="#i-calendar"/></svg></span>
+          <p class="cal-ph__title">Daylon’s calendar opens here</p>
+          <div class="draft draft--inline"><p class="draft__tag">Draft note</p><p>Draft: Daylon’s booking link goes here. Once it is in, this space shows his open times.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <img src="assets/gfi-logo-480.png" width="480" height="121" alt="GuerillaFi" class="foot__logo" loading="lazy">
+    <p class="foot__line">Measured numbers show their dates. Results come from Uni K Wax Scottsdale’s own systems; ad show rates and costs are Daylon’s figures from Nov 2, 2026, Scottsdale, pending the ad account export.</p>
+    <p class="foot__meta"><a href="https://guerillafi.ai" rel="noopener">guerillafi.ai</a><span aria-hidden="true">  /  </span><span>&copy; 2026 GuerillaFi</span></p>
+  </div>
+</footer>
+
+<script src="app.js?v=12" defer></script>
+</body>
+</html>
